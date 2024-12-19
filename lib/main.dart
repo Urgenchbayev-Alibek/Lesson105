@@ -54,8 +54,7 @@ class MyApp extends StatelessWidget {
                             ),
                             Text(
                               "JUNE",
-                              style:
-                                  TextStyle(fontSize: 10, color: Colors.black),
+                              style: TextStyle(fontSize: 10, color: Colors.black),
                             ),
                           ],
                         ),
@@ -92,33 +91,47 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 5),
-                const Padding(
-                  padding: EdgeInsets.only(left: 20),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
                   child: Row(
                     children: [
-                      Stack(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Image(
-                                  image: AssetImage("assets_2/profile_1.png"),
-                                  height: 24,
-                                  width: 24),
-                              Image(
-                                  image: AssetImage("assets_2/profile_2.png"),
-                                  height: 24,
-                                  width: 24),
-                              Image(
-                                  image: AssetImage("assets_2/profile_3.png"),
-                                  height: 24,
-                                  width: 24),
-                            ],
+                      Container(
+                        width: 24,
+                        height: 24,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage("assets_2/profile_1.png"),
+                            fit: BoxFit.cover,
                           ),
-                        ],
+                        ),
                       ),
-                      SizedBox(width: 10),
-                      Padding(
+                      // const SizedBox(width: 4),
+                      Container(
+                        width: 24,
+                        height: 24,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage("assets_2/profile_2.png"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      // const SizedBox(width: 4),
+                      Container(
+                        width: 24,
+                        height: 24,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage("assets_2/profile_3.png"),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      const Padding(
                         padding: EdgeInsets.only(right: 12),
                         child: Text(
                           "+20 Going",
